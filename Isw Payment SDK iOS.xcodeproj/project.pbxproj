@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		810CDB9823BCAB2900A5378D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CDB9723BCAB2900A5378D /* AppDelegate.swift */; };
+		810CDB9A23BCAB2900A5378D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CDB9923BCAB2900A5378D /* SceneDelegate.swift */; };
+		810CDB9C23BCAB2900A5378D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CDB9B23BCAB2900A5378D /* ViewController.swift */; };
+		810CDB9F23BCAB2900A5378D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810CDB9D23BCAB2900A5378D /* Main.storyboard */; };
+		810CDBA123BCAB2C00A5378D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 810CDBA023BCAB2C00A5378D /* Assets.xcassets */; };
+		810CDBA423BCAB2C00A5378D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810CDBA223BCAB2C00A5378D /* LaunchScreen.storyboard */; };
+		810CDBB323BE11F800A5378D /* IswMobileSdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CDBAC23BCD42400A5378D /* IswMobileSdk.xcframework */; };
+		810CDBB423BE11F800A5378D /* IswMobileSdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 810CDBAC23BCD42400A5378D /* IswMobileSdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		810CDBB723C337EB00A5378D /* Preference.plist in Resources */ = {isa = PBXBuildFile; fileRef = 810CDBB623C337EB00A5378D /* Preference.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		810CDBB523BE11F800A5378D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				810CDBB423BE11F800A5378D /* IswMobileSdk.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		810CDB9423BCAB2800A5378D /* Isw Payment SDK iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Isw Payment SDK iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		810CDB9723BCAB2900A5378D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		810CDB9923BCAB2900A5378D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		810CDB9B23BCAB2900A5378D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		810CDB9E23BCAB2900A5378D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		810CDBA023BCAB2C00A5378D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		810CDBA323BCAB2C00A5378D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		810CDBA523BCAB2C00A5378D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		810CDBAC23BCD42400A5378D /* IswMobileSdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IswMobileSdk.xcframework; path = ../mobileSdk/IswMobileSdk.xcframework; sourceTree = "<group>"; };
+		810CDBB623C337EB00A5378D /* Preference.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preference.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		810CDB9123BCAB2800A5378D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				810CDBB323BE11F800A5378D /* IswMobileSdk.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		810CDB8B23BCAB2800A5378D = {
+			isa = PBXGroup;
+			children = (
+				810CDB9623BCAB2800A5378D /* Isw Payment SDK iOS */,
+				810CDB9523BCAB2800A5378D /* Products */,
+				810CDBAB23BCD42400A5378D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		810CDB9523BCAB2800A5378D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				810CDB9423BCAB2800A5378D /* Isw Payment SDK iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		810CDB9623BCAB2800A5378D /* Isw Payment SDK iOS */ = {
+			isa = PBXGroup;
+			children = (
+				810CDB9723BCAB2900A5378D /* AppDelegate.swift */,
+				810CDB9923BCAB2900A5378D /* SceneDelegate.swift */,
+				810CDB9B23BCAB2900A5378D /* ViewController.swift */,
+				810CDB9D23BCAB2900A5378D /* Main.storyboard */,
+				810CDBA023BCAB2C00A5378D /* Assets.xcassets */,
+				810CDBA223BCAB2C00A5378D /* LaunchScreen.storyboard */,
+				810CDBA523BCAB2C00A5378D /* Info.plist */,
+				810CDBB623C337EB00A5378D /* Preference.plist */,
+			);
+			path = "Isw Payment SDK iOS";
+			sourceTree = "<group>";
+		};
+		810CDBAB23BCD42400A5378D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				810CDBAC23BCD42400A5378D /* IswMobileSdk.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		810CDB9323BCAB2800A5378D /* Isw Payment SDK iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 810CDBA823BCAB2C00A5378D /* Build configuration list for PBXNativeTarget "Isw Payment SDK iOS" */;
+			buildPhases = (
+				810CDB9023BCAB2800A5378D /* Sources */,
+				810CDB9123BCAB2800A5378D /* Frameworks */,
+				810CDB9223BCAB2800A5378D /* Resources */,
+				810CDBB523BE11F800A5378D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Isw Payment SDK iOS";
+			productName = "Isw Payment SDK iOS";
+			productReference = 810CDB9423BCAB2800A5378D /* Isw Payment SDK iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		810CDB8C23BCAB2800A5378D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Interswitch;
+				TargetAttributes = {
+					810CDB9323BCAB2800A5378D = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 810CDB8F23BCAB2800A5378D /* Build configuration list for PBXProject "Isw Payment SDK iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 810CDB8B23BCAB2800A5378D;
+			productRefGroup = 810CDB9523BCAB2800A5378D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				810CDB9323BCAB2800A5378D /* Isw Payment SDK iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		810CDB9223BCAB2800A5378D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				810CDBA423BCAB2C00A5378D /* LaunchScreen.storyboard in Resources */,
+				810CDBB723C337EB00A5378D /* Preference.plist in Resources */,
+				810CDBA123BCAB2C00A5378D /* Assets.xcassets in Resources */,
+				810CDB9F23BCAB2900A5378D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		810CDB9023BCAB2800A5378D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				810CDB9C23BCAB2900A5378D /* ViewController.swift in Sources */,
+				810CDB9823BCAB2900A5378D /* AppDelegate.swift in Sources */,
+				810CDB9A23BCAB2900A5378D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		810CDB9D23BCAB2900A5378D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				810CDB9E23BCAB2900A5378D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		810CDBA223BCAB2C00A5378D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				810CDBA323BCAB2C00A5378D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		810CDBA623BCAB2C00A5378D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		810CDBA723BCAB2C00A5378D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		810CDBA923BCAB2C00A5378D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5RQXBC2F2;
+				INFOPLIST_FILE = "Isw Payment SDK iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interswitch.Isw-Payment-SDK-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		810CDBAA23BCAB2C00A5378D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q5RQXBC2F2;
+				INFOPLIST_FILE = "Isw Payment SDK iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interswitch.Isw-Payment-SDK-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		810CDB8F23BCAB2800A5378D /* Build configuration list for PBXProject "Isw Payment SDK iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				810CDBA623BCAB2C00A5378D /* Debug */,
+				810CDBA723BCAB2C00A5378D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		810CDBA823BCAB2C00A5378D /* Build configuration list for PBXNativeTarget "Isw Payment SDK iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				810CDBA923BCAB2C00A5378D /* Debug */,
+				810CDBAA23BCAB2C00A5378D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 810CDB8C23BCAB2800A5378D /* Project object */;
+}
