@@ -11,8 +11,8 @@ import IswMobileSdk
 
 struct Config: Decodable {
     let currencyCode: String
-    let merchantId: String
-    let merchantSecrete: String
+    let clientId: String
+    let clientSecret: String
     let merchantCode: String
 }
 
@@ -22,19 +22,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     
     
+    
+    @IBOutlet weak var resultTitle: UILabel!
+    @IBOutlet weak var resultContainer: UIStackView!
+    @IBOutlet weak var resultAmount: UILabel!
+    @IBOutlet weak var resultChannel: UILabel!
+    @IBOutlet weak var resultCode: UILabel!
+    @IBOutlet weak var resultDescription: UILabel!
+    @IBOutlet weak var resultSuccessStatus: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         submitButton.clipsToBounds = true
         submitButton.layer.cornerRadius = 5
+        
+        amountInput.addTarget(self, action: #selector(didTypeAmount), for: .editingChanged)
+        // hide result
+        toggleResult(show: false)
     }
     
     @IBAction func onPayTapped(_ sender: Any) {
-        guard let preparedConfig = getConfigFromProps() else { return }
-        let config = IswSdkConfig(merchantId: preparedConfig.merchantId,
-                                  merchantSecrete: preparedConfig.merchantSecrete,
-                                  currencyCode: preparedConfig.currencyCode,
-                                  merchantCode: preparedConfig.merchantCode)
         
         let date = Int64((Date().timeIntervalSince1970 * 1000.0).rounded())
         let customerId = "your+customer+id",
@@ -46,26 +54,53 @@ class ViewController: UIViewController {
         let hasText = amountInput.text != nil && amountInput.text!.count > 0
         let amountString: String = hasText ? amountInput.text! : "2500"
         let amount = Int(amountString)! * 100
-        let info = IswPaymentInfo(customerId: customerId, customerName: customerName,
-                                  customerEmail: customerEmail, customerMobile: customerMobile,
-                                  reference: reference, amount: amount)
+        let info = IswPaymentInfo(
+            customerId: customerId,
+            customerName: customerName,
+            customerEmail: customerEmail,
+            customerMobile: customerMobile,
+            reference: reference,
+            amount: amount
+        )
         
-        IswMobileSdk.intialize(config: config)
         
         IswMobileSdk.pay(on: self, with: info, call: self)
     }
-
-    private func getConfigFromProps() -> Config? {
-        // get configuration stored in Preference.plist file
-        if  let path = Bundle.main.path(forResource: "Preference", ofType: "plist"),
-            let xml = FileManager.default.contents(atPath: path),
-            let config = try? PropertyListDecoder().decode(Config.self, from: xml) {
+    
+    
+    @objc func didTypeAmount() {
+        // hide the result
+        toggleResult(show: false)
+    }
+    
+    
+    private func showResult(title: String, result: IswPaymentResult?) {
+        // show result
+        toggleResult(show: true)
+        resultTitle.text = title
+        let hasValue = result != nil
+        resultTitle.textColor = !hasValue ? .red : .blue
         
-            // return extracted config
-            return config
+        resultAmount.isHidden = !hasValue
+        resultCode.isHidden = !hasValue
+        resultDescription.isHidden = !hasValue
+        resultSuccessStatus.isHidden = !hasValue
+        resultChannel.isHidden = !hasValue
+        
+        guard let result = result else { return }
+        
+        resultAmount.text = "\(result.amount / 100)"
+        resultCode.text = result.responseCode
+        resultDescription.text = result.responseDescription
+        resultSuccessStatus.text = "\(result.isSuccessful)"
+        resultChannel.text = "\(result.channel)"
+    }
+    
+    private func toggleResult(show: Bool) {
+        UIView.animate(withDuration: 0.3) {
+            self.resultContainer.alpha = show ? 1 : 0
+            self.resultContainer.isHidden = !show
         }
-        
-        return nil
     }
 }
 
@@ -73,35 +108,12 @@ class ViewController: UIViewController {
 
 extension ViewController: IswPaymentDelegate {
     func onUserDidCancel() {
-        let message = "You cancelled payment, please try again"
-        self.toast(message: message)
+        let title = "You cancelled payment"
+        showResult(title: title, result: nil)
     }
     
     func onUserDidCompletePayment(result: IswPaymentResult) {
-        let message = "You completed payment"
-        self.toast(message: message)
-    }
-    
-    func toast(message: String, delay: Double = 3.0) {
-        // create toast
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
-        
-        if let popoverController = alert.popoverPresentationController {
-            // to set the source of your alert
-            popoverController.sourceView = self.view
-            
-            // set the toas to show at bottom of screen.
-            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.height, width: 0, height: 0)
-            
-            // to hide the arrow of any particular direction
-            popoverController.permittedArrowDirections = []
-            
-            // show toast
-            self.present(alert, animated: true)
-            // dismiss toast after time delay
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay) {
-                alert.dismiss(animated: true)
-            }
-        }
+        let title = "Payment Result"
+        showResult(title: title, result: result)
     }
 }

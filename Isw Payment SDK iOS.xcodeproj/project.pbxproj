@@ -13,19 +13,19 @@
 		810CDB9F23BCAB2900A5378D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810CDB9D23BCAB2900A5378D /* Main.storyboard */; };
 		810CDBA123BCAB2C00A5378D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 810CDBA023BCAB2C00A5378D /* Assets.xcassets */; };
 		810CDBA423BCAB2C00A5378D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810CDBA223BCAB2C00A5378D /* LaunchScreen.storyboard */; };
-		810CDBB323BE11F800A5378D /* IswMobileSdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810CDBAC23BCD42400A5378D /* IswMobileSdk.xcframework */; };
-		810CDBB423BE11F800A5378D /* IswMobileSdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 810CDBAC23BCD42400A5378D /* IswMobileSdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		810CDBB723C337EB00A5378D /* Preference.plist in Resources */ = {isa = PBXBuildFile; fileRef = 810CDBB623C337EB00A5378D /* Preference.plist */; };
+		817F195624DD78E0005C5DBC /* IswMobileSdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8108327624DB2BDB008330E9 /* IswMobileSdk.xcframework */; };
+		817F195724DD78E0005C5DBC /* IswMobileSdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8108327624DB2BDB008330E9 /* IswMobileSdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		810CDBB523BE11F800A5378D /* Embed Frameworks */ = {
+		817F195824DD78E0005C5DBC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				810CDBB423BE11F800A5378D /* IswMobileSdk.xcframework in Embed Frameworks */,
+				817F195724DD78E0005C5DBC /* IswMobileSdk.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8108327624DB2BDB008330E9 /* IswMobileSdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IswMobileSdk.xcframework; sourceTree = "<group>"; };
 		810CDB9423BCAB2800A5378D /* Isw Payment SDK iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Isw Payment SDK iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		810CDB9723BCAB2900A5378D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		810CDB9923BCAB2900A5378D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		810CDBA023BCAB2C00A5378D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		810CDBA323BCAB2C00A5378D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		810CDBA523BCAB2C00A5378D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		810CDBAC23BCD42400A5378D /* IswMobileSdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IswMobileSdk.xcframework; path = ../mobileSdk/IswMobileSdk.xcframework; sourceTree = "<group>"; };
 		810CDBB623C337EB00A5378D /* Preference.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preference.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810CDBB323BE11F800A5378D /* IswMobileSdk.xcframework in Frameworks */,
+				817F195624DD78E0005C5DBC /* IswMobileSdk.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +92,7 @@
 		810CDBAB23BCD42400A5378D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				810CDBAC23BCD42400A5378D /* IswMobileSdk.xcframework */,
+				8108327624DB2BDB008330E9 /* IswMobileSdk.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,7 +107,7 @@
 				810CDB9023BCAB2800A5378D /* Sources */,
 				810CDB9123BCAB2800A5378D /* Frameworks */,
 				810CDB9223BCAB2800A5378D /* Resources */,
-				810CDBB523BE11F800A5378D /* Embed Frameworks */,
+				817F195824DD78E0005C5DBC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,15 +317,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q5RQXBC2F2;
+				DEVELOPMENT_TEAM = M28B7CT6HR;
 				INFOPLIST_FILE = "Isw Payment SDK iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.interswitch.Isw-Payment-SDK-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.interswitch.IswPaymentSDKiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -335,15 +335,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q5RQXBC2F2;
+				DEVELOPMENT_TEAM = M28B7CT6HR;
 				INFOPLIST_FILE = "Isw Payment SDK iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.interswitch.Isw-Payment-SDK-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.interswitch.IswPaymentSDKiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
