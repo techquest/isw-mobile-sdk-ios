@@ -143,7 +143,12 @@ extension ViewController: IswPaymentDelegate {
         // Note: If you have split settlement accounts,
         // you can create payment info with the variant
         // constructor that takes split settlement accounts
-        let settlementAccounts = [...] // list of accounts 'IswSettlementAccount' 
+        // list of accounts 'IswSettlementAccount' 
+        let settlementAccounts = [
+            IswSettlementAccount(alias: "pacct", amount: 0, percentage: 63.79, description: "primary account", isPrimary: true),
+            IswSettlementAccount(alias: "sacct", amount: 0, percentage: 36.21, description: "secondary account", isPrimary: false)
+        ]
+        
         let info = IswPaymentInfo(
             customerId: customerId,
             customerName: customerName,

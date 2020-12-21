@@ -54,13 +54,20 @@ class ViewController: UIViewController {
         let hasText = amountInput.text != nil && amountInput.text!.count > 0
         let amountString: String = hasText ? amountInput.text! : "2500"
         let amount = Int(amountString)! * 100
+        
+        let settlementAccounts = [
+            IswSettlementAccount(alias: "qr_thing", amount: 0, percentage: 63.79, description: "primary account", isPrimary: true),
+            IswSettlementAccount(alias: "qq111", amount: 0, percentage: 36.21, description: "secondary account", isPrimary: false)
+        ]
+
         let info = IswPaymentInfo(
             customerId: customerId,
             customerName: customerName,
             customerEmail: customerEmail,
             customerMobile: customerMobile,
             reference: reference,
-            amount: amount
+            amount: amount,
+            settlementAccounts: settlementAccounts
         )
         
         
